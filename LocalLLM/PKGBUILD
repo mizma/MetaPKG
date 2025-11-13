@@ -1,0 +1,22 @@
+# PKGBUILD
+pkgname=local-llm-metapkg
+pkgver=0.2
+pkgrel=1
+pkgdesc="Meta-package that installs local llm relatec packages"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/LocalLLM"
+license=('MIT')
+depends=(
+    nvidia-open-dkms
+    nvidia-utils
+    cuda
+    cudnn
+    docker
+    docker-compose
+    ollama-cuda
+)
+
+# No source, no build, no files to install
+package() {
+    :  # intentionally empty
+}
