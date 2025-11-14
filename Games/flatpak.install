@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+FLATPAK_APPS_SYSTEM=(
+  "flathub it.mijorus.gearlever"
+)
+
+FLATPAK_APPS_USER=(
+  "flathub net.kuribo64.melonDS"
+  "flathub org.DolphinEmu.dolphin-emu"
+  "flathub org.bungie.source.AlephOne"
+  "flathub org.bungie.source.Marathon"
+  "flathub org.bungie.source.Marathon2"
+  "flathub org.bungie.source.MarathonInfinity"
+  "flathub org.duckstation.DuckStation"
+  "flathub org.libretro.RetroArch"
+  "flathub org.ppsspp.PPSSPP"
+)
+
+# Flatpack install
+system_install() {
+  echo "Setting up Flatpak apps(system)..."
+
+  # Ensure Flathub is added (only once)
+  if ! flatpak remotes --system | grep -q "flathub"; then
+    echo "Adding Flathub repository..."
+    flatpak remote-add --if-not-exists --system \
+      flathub https://flathub.org/repo/flathub.flatpakrepo
+  fi
+
+  # Loop through each app and install
+  for app_ref in "${FLATPAK_APPS_SYSTEM[@]}"; do
+    remote="${app_ref%% *}"
+    app_id="${app_ref#* }"
+
+    if flatpak list --system | grep -q "^${app_id}"; then
+      echo "Already installed: $app_id"
+    else
+      echo "Installing: $app_id from $remote..."
+      if sudo flatpak install --system --noninteractive "$remote" "$app_id"; then
+        echo "Successfully installed: $app_id"
+      else
+        echo "Failed to install: $app_id (run 'flatpak install $remote $app_id' manually)"
+      fi
+    fi
+  done
+
+  echo "Flatpak setup complete!"
+}
+
+# Flatpack install
+user_install() {
+  echo "Setting up Flatpak apps(user)..."
+
+  # Ensure Flathub is added (only once)
+  if ! flatpak remotes | grep -q "flathub"; then
+    echo "Adding Flathub repository..."
+    flatpak remote-add --if-not-exists \
+      flathub https://flathub.org/repo/flathub.flatpakrepo
+  fi
+
+  # Loop through each app and install
+  for app_ref in "${FLATPAK_APPS_USER[@]}"; do
+    remote="${app_ref%% *}"
+    app_id="${app_ref#* }"
+
+    if flatpak list | grep -q "^${app_id}"; then
+      echo "Already installed: $app_id"
+    else
+      echo "Installing: $app_id from $remote..."
+      if sudo flatpak install --noninteractive "$remote" "$app_id"; then
+        echo "Successfully installed: $app_id"
+      else
+        echo "Failed to install: $app_id (run 'flatpak install $remote $app_id' manually)"
+      fi
+    fi
+  done
+
+  echo "Flatpak setup complete!"
+}
+
+system_install
+user_install

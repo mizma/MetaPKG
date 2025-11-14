@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -72,6 +72,7 @@ depends=(
     gvfs
     libfido2
     liquidctl
+    lynis
     openrgb
     os-prober
     pam-u2f
@@ -83,11 +84,14 @@ depends=(
     python-pip
     python-pywalfox
     python-screeninfo
+    rkhunter
     syncthing
     timeshift
     timeshift-autosnap
     timeshift-systemd-timer
+    veracrypt
     yubico-authenticator-bin
+    vial-appimage
 
     # CLI
     bat
@@ -112,6 +116,7 @@ depends=(
     wget
     zsh
     zsh-completions
+    starship
 
     # Apps
     discord
@@ -123,7 +128,9 @@ depends=(
     handbrake
     inkscape
     krita
+    mkvtoolnix-gui
     mullvad-vpn-bin
+    qalculate-qt
     vlc
     vlc-plugin-aom
     vlc-plugin-ffmpeg

@@ -1,0 +1,40 @@
+# PKGBUILD
+pkgname=metapkg-games
+pkgver=0.1
+pkgrel=1
+pkgdesc="Game related packages"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/Games"
+license=('MIT')
+depends=(
+    # Basic game environment
+    game-devices-udev
+    gamemode
+    gamescope
+    lutris
+    mangohud
+    steam
+    umu-launcher
+    vita3k-git
+    wine
+
+    # Tools
+    cdemu
+    protonplus
+    scrcpy
+    syncthing
+
+    # EmuDeck Dependencies
+    bash
+    flatpak
+    fuse2
+    git
+    jq
+    unzip
+    zenity
+)
+
+# No source, no build, no files to install
+package() {
+    true;
+}

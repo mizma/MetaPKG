@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-dev-env-tools
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc="Personal development tool essentials"
 arch=('any')
@@ -21,6 +21,8 @@ depends=(
     git-delta
     jq
     kitty
+    lazygit
+    less
     neovim
     npm
     python
