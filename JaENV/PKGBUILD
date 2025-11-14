@@ -1,0 +1,28 @@
+# PKGBUILD
+pkgname=ja-jp-essentials
+pkgver=0.1
+pkgrel=1
+pkgdesc="Japanese Localization essentials"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/JaENV"
+license=('MIT')
+depends=(
+    adobe-source-han-sans-jp-fonts
+    fcitx5-configtool
+    fcitx5-gtk
+    fcitx5-mozc
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+    otf-font-awesome
+    otf-ipafont
+    ttf-hackgen
+    ttf-opensans
+    ttf-vlgothic
+)
+
+# No source, no build, no files to install
+package() {
+    :  # intentionally empty
+}

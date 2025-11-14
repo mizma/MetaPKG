@@ -1,0 +1,40 @@
+# PKGBUILD
+pkgname=meta-dev-env-tools
+pkgver=0.1
+pkgrel=1
+pkgdesc="Personal development tool essentials"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/DevENV"
+license=('MIT')
+depends=(
+    bat
+    btop
+    clang
+    ctags
+    diffutils
+    docker
+    docker-buildx
+    docker-compose
+    git-delta
+    eza
+    fzf
+    git
+    jq
+    kitty
+    neovim
+    shellcheck-bin
+    starship
+    stow
+    sysz
+    tealdeer
+    timg
+    tmux
+    wget
+    zsh
+    vscodium
+)
+
+# No source, no build, no files to install
+package() {
+    true;
+}
