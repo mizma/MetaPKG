@@ -4,8 +4,7 @@ Installs IME and JP fonts.
 
 ## Install
 
-1. `makepkg -s` to generate the Package
-2. `sudo pacman -U ja-jp-essentials-<ver>-any.pkg.tar.zst` to install the listed dependencies.
+1. `yay -Bi .` to generate the Package and install
 
 ### Set environments
 

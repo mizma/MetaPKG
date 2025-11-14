@@ -2,8 +2,7 @@
 
 ## Install
 
-1. `makepkg -s` to generate the Package
-2. `sudo pacman -U local-llm-metapkg-<ver>-any.pkg.tar.gz` to install the listed dependencies.
+1. `yay -Bi .` to generate the Package and install
 
 ### Set environments
 
