@@ -1,8 +1,32 @@
 import os
+import glob
 from pathlib import Path
 from invoke import task
 
 TASKS_DIR = Path(__file__).resolve().parent
+
+##############################################
+### Helper Functions
+##############################################
+
+def run_rm(c, paths):
+    """run rm -rf command equivalent for each pf against paths
+
+    Args:
+        c (Obj): invoke context object
+        paths (List): List of paths to remove
+    """
+    files = []
+    for f in paths:
+        files.extend(glob.glob(f))
+
+    for f in files:
+        c.run(f"rm -rf {f}")
+    pass
+
+##############################################
+### Invoke Task Definitions
+##############################################
 
 @task()
 def install(c):
@@ -54,3 +78,10 @@ def upgrade(c):
     c.run("docker compose down")
     c.run("docker compose up -d")
     pass
+
+@task()
+def clean(c):
+    """remove package artifacts"""
+    run_rm(c, ["src", "pkg", "*.pkg.tar.zst", ".SRCINFO"])
+    pass
+
