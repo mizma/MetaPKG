@@ -1,0 +1,118 @@
+# PKGBUILD
+pkgname=meta-base-desktop-env
+pkgver=0.1
+pkgrel=1
+pkgdesc="Personal desktop environment"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/Base"
+license=('MIT')
+depends=(
+    # Fonts
+    adobe-source-han-sans-jp-fonts
+    cantarell-fonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+    otf-font-awesome
+    otf-ipafont
+    ttf-bitstream-vera
+    ttf-dejavu
+    ttf-fira-code
+    ttf-fira-sans
+    ttf-firacode-nerd
+    ttf-hackgen
+    ttf-liberation
+    ttf-opensans
+    ttf-vlgothic
+
+    # DE Related
+    bibata-cursor-theme
+    breeze
+    cliphist
+    figlet
+    grim
+    grimblast-git
+    hypridle
+    hyprland
+    hyprlock
+    hyprpaper
+    hyprpicker
+    libnotify
+    network-manager-applet
+    nm-connection-editor
+    nwg-dock-hyprland
+    nwg-look
+    papirus-icon-theme
+    pavucontrol
+    polkit-gnome
+    qt5-wayland
+    qt6-wayland
+    qt6ct
+    rofi
+    slurp
+    swaync
+    tumbler
+    waybar
+    waypaper
+    wlogout
+    xclip
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xdg-user-dirs
+
+    # Tools
+    blueman
+    brightnessctl
+    gvfs
+    libfido2
+    liquidctl
+    pam-u2f
+    power-profiles-daemon
+    python-gobject
+    python-pip
+    python-pywalfox
+    python-screeninfo
+    syncthing
+    yubico-authenticator-bin
+
+    # CLI
+    btop
+    eza
+    fastfetch
+    fzf
+    git
+    gum
+    htop
+    imagemagick
+    jq
+    kitty
+    neovim
+    nvtop
+    pacseek
+    python-pipx
+    rsync
+    unzip
+    upscayl-ncnn
+    wget
+    zsh
+    zsh-completions
+
+    # Apps
+    discord
+    flatpak
+    font-manager
+    google-chrome
+    handbrake
+    inkscape
+    krita
+    vlc
+    vlc-plugin-aom
+    vlc-plugin-ffmpeg
+    vlc-plugin-x265
+)
+
+# No source, no build, no files to install
+package() {
+    true;
+}
