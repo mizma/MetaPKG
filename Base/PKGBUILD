@@ -1,5 +1,5 @@
 # PKGBUILD
-pkgname=meta-base-desktop-env
+pkgname=metapkg-base-desktop-env
 pkgver=0.1
 pkgrel=1
 pkgdesc="Personal desktop environment"

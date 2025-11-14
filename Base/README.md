@@ -1,4 +1,4 @@
-# Base Desktop environment
+# Base Desktop environment meta package
 
 Installs base Desktop environment using Hyprland.
 

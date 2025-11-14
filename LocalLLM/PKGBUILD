@@ -1,5 +1,5 @@
 # PKGBUILD
-pkgname=local-llm-metapkg
+pkgname=metapkg-local-llm
 pkgver=0.2
 pkgrel=1
 pkgdesc="Meta-package that installs local llm relatec packages"

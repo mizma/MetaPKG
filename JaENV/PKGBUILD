@@ -1,5 +1,5 @@
 # PKGBUILD
-pkgname=ja-jp-essentials
+pkgname=metapkg-ja-jp-essentials
 pkgver=0.1
 pkgrel=1
 pkgdesc="Japanese Localization essentials"

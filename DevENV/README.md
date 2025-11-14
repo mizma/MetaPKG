@@ -1,6 +1,6 @@
-# Ja-JP Environment setup Meta Package
+# Development environments meta package
 
-Installs IME and JP fonts.
+Installs Development environment related packages
 
 ## Install
 

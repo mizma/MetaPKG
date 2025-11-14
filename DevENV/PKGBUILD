@@ -1,5 +1,5 @@
 # PKGBUILD
-pkgname=meta-dev-env-tools
+pkgname=metapkg-dev-env-tools
 pkgver=0.1
 pkgrel=1
 pkgdesc="Personal development tool essentials"
