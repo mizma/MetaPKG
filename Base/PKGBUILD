@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -39,6 +39,7 @@ depends=(
     hyprpaper
     hyprpicker
     libnotify
+    mission-center
     network-manager-applet
     nm-connection-editor
     nwg-dock-hyprland
@@ -46,6 +47,7 @@ depends=(
     papirus-icon-theme
     pavucontrol
     polkit-gnome
+    qjackctl
     qt5-wayland
     qt6-wayland
     qt6ct
@@ -61,22 +63,34 @@ depends=(
     xdg-desktop-portal-hyprland
     xdg-user-dirs
 
-    # Tools
+    # Tools/System
     blueman
     brightnessctl
+    cdemu-client
+    cdemu-daemon
+    gst-plugin-pipewire
     gvfs
     libfido2
     liquidctl
+    openrgb
+    os-prober
     pam-u2f
+    pipewire-alsa
+    pipewire-jack
+    pipewire-pulse
     power-profiles-daemon
     python-gobject
     python-pip
     python-pywalfox
     python-screeninfo
     syncthing
+    timeshift
+    timeshift-autosnap
+    timeshift-systemd-timer
     yubico-authenticator-bin
 
     # CLI
+    bat
     btop
     eza
     fastfetch
@@ -92,6 +106,7 @@ depends=(
     pacseek
     python-pipx
     rsync
+    tmux
     unzip
     upscayl-ncnn
     wget
@@ -100,12 +115,15 @@ depends=(
 
     # Apps
     discord
+    firefox
+    firefox-i18n-ja
     flatpak
     font-manager
     google-chrome
     handbrake
     inkscape
     krita
+    mullvad-vpn-bin
     vlc
     vlc-plugin-aom
     vlc-plugin-ffmpeg

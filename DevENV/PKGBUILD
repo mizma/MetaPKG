@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-dev-env-tools
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Personal development tool essentials"
 arch=('any')
@@ -15,13 +15,17 @@ depends=(
     docker
     docker-buildx
     docker-compose
-    git-delta
     eza
     fzf
     git
+    git-delta
     jq
     kitty
     neovim
+    npm
+    python
+    python-pip
+    python-pipx
     shellcheck-bin
     starship
     stow
@@ -29,9 +33,10 @@ depends=(
     tealdeer
     timg
     tmux
+    vscodium
     wget
     zsh
-    vscodium
+    zsh-completions
 )
 
 # No source, no build, no files to install
