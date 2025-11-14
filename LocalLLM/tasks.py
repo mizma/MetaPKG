@@ -45,3 +45,12 @@ def stop(c):
     os.chdir(target_dir)
     c.run("docker compose stop")
     pass
+
+@task()
+def upgrade(c):
+    target_dir = TASKS_DIR / "open-webui"
+    os.chdir(target_dir)
+    c.run("docker compose pull")
+    c.run("docker compose down")
+    c.run("docker compose up -d")
+    pass
