@@ -19,7 +19,8 @@ depends=(
     wine
 
     # Tools
-    cdemu
+    cdemu-client
+    cdemu-daemon
     protonplus
     scrcpy
     syncthing
