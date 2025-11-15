@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+FLATPAK_APPS=(
+  "flathub com.github.PintaProject.Pinta"
+  "flathub com.makemkv.MakeMKV"
+  "flathub com.obsproject.Studio"
+  "flathub it.mijorus.gearlever"
+  "flathub org.gnome.Loupe"
+  "flathub org.keepassxc.KeePassXC"
+)
+
+PIPX_APPS=(
+  "imgtk"
+  "invoke"
+  "yt-dlp"
+  "yubikey-manager"
+)
+
+PIPX_INJECTION=(
+  "yt-dlp certifi"
+  "yt-dlp ffprobe"
+  "yt-dlp mutagen"
+  "yt-dlp phantomjs"
+  "yt-dlp pycryptodomex"
+  "yt-dlp requests"
+  "yt-dlp secretstorage"
+  "yt-dlp websockets"
+  )
+
+INSTALL_SCOPE="--system"
+
+# Flatpack install
+flatpak_install() {
+  echo "Setting up Flatpak apps..."
+
+  # Ensure Flathub is added (only once)
+  if ! flatpak remotes --system | grep -q "flathub"; then
+    echo "Adding Flathub repository..."
+    flatpak remote-add --if-not-exists --system \
+      flathub https://flathub.org/repo/flathub.flatpakrepo
+  fi
+
+  # Loop through each app and install
+  for app_ref in "${FLATPAK_APPS[@]}"; do
+    remote="${app_ref%% *}"
+    app_id="${app_ref#* }"
+
+    if flatpak list --system | grep -q "^${app_id}"; then
+      echo "Already installed: $app_id"
+    else
+      echo "Installing: $app_id from $remote..."
+      if sudo flatpak install $INSTALL_SCOPE --noninteractive "$remote" "$app_id"; then
+        echo "Successfully installed: $app_id"
+      else
+        echo "Failed to install: $app_id (run 'flatpak install $remote $app_id' manually)"
+      fi
+    fi
+  done
+
+  echo "Flatpak setup complete!"
+}
+
+pipx_install() {
+  echo "Setting up pipx apps..."
+
+  for app_id in "${PIPX_APPS[@]}"; do
+    if pipx list | grep -q "${app_id}"; then
+      echo "Already installed: $app_id"
+    else
+      echo "Installing: $app_id"
+      if pipx install "$app_id"; then
+        echo "Successfully installed: $app_id"
+      else
+        echo "Failed to install: $app_id (run 'pipx install $app_id' manually)"
+      fi
+    fi
+  done
+}
+
+pipx_inject() {
+  for inject_ref in "${PIPX_INJECTION[@]}"; do
+    target="${inject_ref%% *}"
+    pkg_id="${inject_ref#* }"
+
+    echo "Injecting $pkg_id to $target"
+    pipx inject "$target" "$pkg_id"
+  done
+}
+
+flatpak_install
+pipx_install
+pipx_inject
