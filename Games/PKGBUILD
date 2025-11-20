@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-games
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Game related packages"
 arch=('any')
@@ -24,6 +24,13 @@ depends=(
     protonplus
     scrcpy
     syncthing
+
+    ## GOverlay for managing vkBasalt and OptiScaler
+    goverlay
+    mesa-utils
+    vkbasalt
+    vulkan-tools
+    git
 
     # EmuDeck Dependencies
     bash
