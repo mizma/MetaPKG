@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-ja-jp-essentials
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Japanese Localization essentials"
 arch=('any')
@@ -17,6 +17,7 @@ depends=(
     noto-fonts-extra
     otf-font-awesome
     otf-ipafont
+    otf-line-seed
     ttf-hackgen
     ttf-opensans
     ttf-vlgothic
