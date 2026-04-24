@@ -16,6 +16,7 @@ depends=(
     noto-fonts-extra
     otf-font-awesome
     otf-ipafont
+    otf-line-seed
     ttf-bitstream-vera
     ttf-dejavu
     ttf-fira-code
