@@ -28,7 +28,7 @@ depends=(
     ttf-vlgothic
 
     # DE Related
-    bibata-cursor-theme
+    #bibata-cursor-theme conflicts with end-4 ii
     breeze
     cliphist
     figlet
