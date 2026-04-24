@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -86,6 +86,7 @@ depends=(
     python-pywalfox
     python-screeninfo
     rkhunter
+    seahorse
     syncthing
     timeshift
     timeshift-autosnap
