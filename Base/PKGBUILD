@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.5
+pkgver=0.6
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -17,6 +17,10 @@ depends=(
     otf-font-awesome
     otf-ipafont
     otf-line-seed
+    otf-line-seed-en
+    otf-line-seed-kr
+    otf-line-seed-th
+    otf-line-seed-tw
     ttf-bitstream-vera
     ttf-dejavu
     ttf-fira-code
