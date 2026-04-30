@@ -1,0 +1,23 @@
+# PKGBUILD
+pkgname=metapkg-amdgpu
+pkgver=0.1
+pkgrel=1
+pkgdesc="AMD GPU Drivers"
+arch=('any')
+url="https://github.com/mizma/MetaPKG/AMDGPU"
+license=('MIT')
+depends=(
+    mesa
+    mesa-utils
+    lib32-mesa
+    vulkan-radeon
+    lib32-vulkan-radeon
+    linux-firmware-amdgpu
+    libva-utils
+    vulkan-tools
+)
+
+# No source, no build, no files to install
+package() {
+    :  # intentionally empty
+}
