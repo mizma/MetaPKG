@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-dev-env-tools
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="Personal development tool essentials"
 arch=('any')
@@ -35,7 +35,6 @@ depends=(
     tealdeer
     timg
     tmux
-    vscodium
     wget
     zsh
     zsh-completions
