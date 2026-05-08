@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.7
+pkgver=0.8
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -43,7 +43,7 @@ depends=(
     hyprlock
     hyprpaper
     hyprpicker
-    hyprshutdown-git
+    hyprshutdown
     libnotify
     mission-center
     network-manager-applet
