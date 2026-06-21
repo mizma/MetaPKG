@@ -31,7 +31,6 @@ depends=(
     vkbasalt
     vulkan-tools
     git
-    pascube
 
     # EmuDeck Dependencies
     bash
