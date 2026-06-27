@@ -8,13 +8,17 @@ url="https://github.com/mizma/MetaPKG/AMDGPU"
 license=('MIT')
 depends=(
     mesa
-    mesa-utils
     lib32-mesa
+    mesa-utils
     vulkan-radeon
     lib32-vulkan-radeon
-    linux-firmware-amdgpu
-    libva-utils
     vulkan-tools
+    libva-utils
+    linux-firmware-amdgpu
+    opencl-mesa
+    # Monitoring and control tools
+    corectrl
+    radeontop
 )
 
 # No source, no build, no files to install
