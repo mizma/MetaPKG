@@ -7,13 +7,9 @@ arch=('any')
 url="https://github.com/mizma/MetaPKG/LocalLLM"
 license=('MIT')
 depends=(
-    nvidia-open-dkms
-    nvidia-utils
-    cuda
-    cudnn
     docker
     docker-compose
-    ollama-cuda
+    ollama-rocm
 )
 
 # No source, no build, no files to install
