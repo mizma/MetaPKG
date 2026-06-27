@@ -47,7 +47,6 @@ def install(c):
 
 ~~~ini
 [Service]
-Environment="OLLAMA_CUDA=1"
 Environment="OLLAMA_MAX_LOADED_MODELS=2"
 Environment="OLLAMA_HOST=0.0.0.0"
 ~~~
