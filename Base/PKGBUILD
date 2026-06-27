@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.8
+pkgver=0.9
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -113,7 +113,6 @@ depends=(
     jq
     kitty
     neovim
-    nvtop
     pacseek
     python-pipx
     rsync
