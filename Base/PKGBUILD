@@ -79,7 +79,7 @@ depends=(
     libfido2
     liquidctl
     lynis
-    openrgb
+    openrgb-git
     os-prober
     pam-u2f
     pipewire-alsa
