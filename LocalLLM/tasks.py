@@ -59,6 +59,9 @@ Then `sudo systemctl restart ollama` to restart the service
 def start(c):
     c.run("systemctl start ollama.service")
     target_dir = TASKS_DIR / "open-webui"
+    data_dir = target_dir / "data"
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
     os.chdir(target_dir)
     c.run("docker compose up -d")
     pass
@@ -74,6 +77,9 @@ def stop(c):
 @task()
 def upgrade(c):
     target_dir = TASKS_DIR / "open-webui"
+    data_dir = target_dir / "data"
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
     os.chdir(target_dir)
     c.run("docker compose pull")
     c.run("docker compose down")
