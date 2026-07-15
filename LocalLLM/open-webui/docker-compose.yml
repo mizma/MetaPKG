@@ -12,4 +12,11 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped
+  open-terminal:
+    image: ghcr.io/open-webui/open-terminal
+    container_name: open-terminal
+    volumes:
+      - ./open-terminal:/home/user
+    environment:
+      - OPEN_TERMINAL_API_KEY=Kiddbb0efjYWBBbufMChpRYzImHxbXZA
 

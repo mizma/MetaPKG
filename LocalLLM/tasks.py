@@ -62,6 +62,9 @@ def start(c):
     data_dir = target_dir / "data"
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
+    term_dir = target_dir / "open-terminal"
+    if not os.path.exists(term_dir):
+        os.makedirs(term_dir)
     os.chdir(target_dir)
     c.run("docker compose up -d")
     pass
@@ -80,6 +83,9 @@ def upgrade(c):
     data_dir = target_dir / "data"
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
+    term_dir = target_dir / "open-terminal"
+    if not os.path.exists(term_dir):
+        os.makedirs(term_dir)
     os.chdir(target_dir)
     c.run("docker compose pull")
     c.run("docker compose down")
