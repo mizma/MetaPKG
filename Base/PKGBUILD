@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=metapkg-base-desktop-env
-pkgver=0.9
+pkgver=0.10
 pkgrel=1
 pkgdesc="Personal desktop environment"
 arch=('any')
@@ -79,7 +79,7 @@ depends=(
     libfido2
     liquidctl
     lynis
-    openrgb-git
+    openrgb
     os-prober
     pam-u2f
     pipewire-alsa
